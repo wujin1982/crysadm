@@ -19,3 +19,12 @@ github的帐号很久以前就注册了，但是没有好好利用。总是三�
 
 安装后访问 /install 生成管理员账号
 config.py.example 改名为config.py 使用
+
+##补充说明
+最近有几位同学询问怎么配置不成功，在这里补充说明一下详细细节。ps：已经有同学在vps上配置成功并且正常使用了。
+* 把config.py文件删掉，然后将config.py.example文件重命名为config.py，然后在这个文件中修改你们自己的具体配置信息。
+* 注意满足python的requirements.txt依赖，使用命令：pip install -r requirements.txt安装；
+* 注意服务端口默认是5000，所以你访问的时候应该访问http://xxx.xxx.xx.x:5000，你也可以修改为80端口，如果你的服务器80端口正好闲置的；
+* 启动服务后，第一次访问http://xx.xx.xx.x:5000/install地址，注意是install结尾的，用来生成管理员账号和密码；
+* 如果在启动服务器看到有错误提示，不要着急，尝试下能不能正常访问web页面，如果可以正常访问的话，那就不要在意这些错误了……^_^……
+
