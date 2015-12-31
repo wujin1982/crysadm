@@ -3,10 +3,10 @@ __author__ = 'powergx'
 
 class RedisConfig():
     def __init__(self, host, port, db, password=None):
-        self.host = host
-        self.port = port
-        self.db = db
-        self.password = password
+        self.host = 10.10.71.37
+        self.port = 51830
+        self.db = test
+        self.password = YVxSLSxed
 
 
 class Config(object):
