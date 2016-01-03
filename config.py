@@ -1,16 +1,17 @@
 __author__ = 'powergx'
 
+import os
 
 class RedisConfig():
     def __init__(self, host, port, db, password=None):
-        self.host = 10.10.71.37
-        self.port = 51830
-        self.db = test
-        self.password = YVxSLSxed
+        self.host = os.getenv('REDIS_PORT_6379_TCP_ADDR')
+        self.port = int(os.getenv('REDIS_PORT_6379_TCP_PORT'))
+        self.db = db
+        self.password = os.getenv('REDIS_PASSWORD')
 
 
 class Config(object):
-    DEBUG = False
+    DEBUG = True
     TESTING = False
     DATABASE_URI = ''
     ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
@@ -20,7 +21,7 @@ class Config(object):
     PASSWORD_PREFIX = "08b3db21-d120-11e4-9ttd-10ddb199c373"
     ENCRYPT_PWD_URL = None
     SERVER_IP = '0.0.0.0'
-    SERVER_PORT = 5000
+    SERVER_PORT = 80
 
 
 class ProductionConfig(Config):
